@@ -1,4 +1,4 @@
-import {roundNumber} from './math';
+import { roundNumber } from './math';
 
 export function getCurrencyFormattedNumber(value) {
   if (value === null) {
@@ -29,12 +29,12 @@ export function getFormattedNumber(value) {
     const numbersToTheRightOfDecimal = roundedValue.split('.')[1];
 
     switch (numbersToTheRightOfDecimal.length) {
-      case 0:
-        return roundedValue.replace('.', ''); // no decimal necessary since no numbers after decimal
-      case 1:
-        return `${roundedValue}0`;
-      default:
-        return roundedValue;
+    case 0:
+      return roundedValue.replace('.', ''); // no decimal necessary since no numbers after decimal
+    case 1:
+      return `${roundedValue}0`;
+    default:
+      return roundedValue;
     }
   }
   return roundedValue;

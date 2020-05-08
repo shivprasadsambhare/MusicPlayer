@@ -1,5 +1,5 @@
-import {roundNumber} from './math';
-import {getCurrencyFormattedNumber} from './numberFormat';
+import { roundNumber } from './math';
+import { getCurrencyFormattedNumber } from './numberFormat';
 
 // Private
 function calculateMonthlyCost(milesDrivenPerMonth, ppg, mpg) {
@@ -13,14 +13,14 @@ export function calculateMilesDrivenPerMonth(milesDriven, milesDrivenTimeframe) 
   const weeksPerYear = 52;
 
   switch (milesDrivenTimeframe) {
-    case 'week':
-      return (milesDriven * weeksPerYear) / monthsPerYear;
-    case 'month':
-      return milesDriven;
-    case 'year':
-      return milesDriven / monthsPerYear;
-    default:
-      throw new Error(`Unknown milesDrivenTimeframe passed: ${milesDrivenTimeframe}`);
+  case 'week':
+    return (milesDriven * weeksPerYear) / monthsPerYear;
+  case 'month':
+    return milesDriven;
+  case 'year':
+    return milesDriven / monthsPerYear;
+  default:
+    throw new Error(`Unknown milesDrivenTimeframe passed: ${milesDrivenTimeframe}`);
   }
 }
 
@@ -51,6 +51,6 @@ export function calculateSavings(settings) {
   return {
     monthly: getCurrencyFormattedNumber(monthlySavings),
     annual: getCurrencyFormattedNumber(monthlySavings * 12),
-    threeYear: getCurrencyFormattedNumber(monthlySavings * 12 * 3)
+    threeYear: getCurrencyFormattedNumber(monthlySavings * 12 * 3),
   };
 }

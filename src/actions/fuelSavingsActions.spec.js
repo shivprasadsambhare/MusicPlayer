@@ -1,9 +1,9 @@
+import MockDate from 'mockdate';
 import * as ActionTypes from '../constants/actionTypes';
 import * as ActionCreators from './fuelSavingsActions';
 
-import MockDate from 'mockdate';
 
-import {getFormattedDateTime} from '../utils/dates';
+import { getFormattedDateTime } from '../utils/dates';
 
 describe('Actions', () => {
   let dateModified;
@@ -26,8 +26,8 @@ describe('Actions', () => {
     savings: {
       monthly: 0,
       annual: 0,
-      threeYear: 0
-    }
+      threeYear: 0,
+    },
   };
 
   it('should create an action to save fuel savings', () => {
@@ -35,7 +35,7 @@ describe('Actions', () => {
     const expected = {
       type: ActionTypes.SAVE_FUEL_SAVINGS,
       dateModified,
-      settings: appState
+      settings: appState,
     };
 
     // we expect this to return a function since it is a thunk
@@ -55,7 +55,7 @@ describe('Actions', () => {
       dateModified,
       settings: appState,
       fieldName,
-      value
+      value,
     };
 
     expect(actual).toEqual(expected);
