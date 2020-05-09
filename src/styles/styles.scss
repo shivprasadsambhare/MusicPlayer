@@ -13,6 +13,8 @@ body {
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-weight: 300;
+  background-image: url('../snaps/background.jpg');
+  background-size: cover;
 }
 
 td {
@@ -21,6 +23,14 @@ td {
 
 h2 {
 	color: $vin-blue;
+}
+
+Logo{
+  width: 20;
+  height: 20;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .savings { color: $vin-green; }
