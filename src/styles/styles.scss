@@ -1,3 +1,5 @@
+@import './audiostrip.scss';
+
 /* Variables */
 $vin-blue: #5bb7db;
 $vin-green: #60b044;
@@ -25,7 +27,7 @@ h2 {
 	color: $vin-blue;
 }
 
-Logo{
+.Logo{
   width: 20;
   height: 20;
   position: fixed;

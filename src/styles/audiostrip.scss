@@ -1,0 +1,51 @@
+@mixin option {
+  height: 50px;
+        width: 50px;
+        background: transparent;
+        outline: none;
+        border-radius: 10px;
+        border: none;
+        margin: 10px;
+}
+
+.audio-home{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  &-progress{
+      height: 2px;
+      background-color: red;
+  }
+  &-strip{
+    height: 60px;
+  
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    &-track{
+      width: 40%;
+    }
+    &-controls{
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+      &-option{
+        @include option();
+      }
+    }
+    &-settings{
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+      &-option{
+        @include option();
+      }
+    }
+  }
+}
