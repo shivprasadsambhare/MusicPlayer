@@ -1,7 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable import/no-named-as-default */
 import { Route, Switch } from 'react-router-dom';
-
+import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { hot } from 'react-hot-loader';
@@ -22,6 +22,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentTheme: {
+        main: 'red',
+        mainBorder: 'black',
+      },
 
     };
   }
@@ -30,6 +34,15 @@ class App extends React.Component {
     this.setState({ songName: song.target.value });
     // eslint-disable-next-line react/prop-types
     console.log(this.state.songName);
+  }
+
+
+  setTheme() {
+    const darkTheme = {
+      main: 'blue',
+      mainBorder: 'yellow',
+    };
+    this.setState({ currentTheme: darkTheme });
   }
 
   render() {
@@ -43,9 +56,11 @@ class App extends React.Component {
         src: song2,
       }];
 
+    const mybuttonColor = 'blue';
     return (
       <div>
         <div>
+          <button type="button" onClick={() => this.setTheme()}>Dark theme</button>
           <Header />
         </div>
         <Switch>
@@ -62,7 +77,10 @@ class App extends React.Component {
           <option value={song1}>1</option>
           <option value={song2}>2</option>
         </select>
-        <AudioPlayer track={track} />
+        <ThemeProvider theme={this.state.currentTheme}>
+          <AudioPlayer main={mybuttonColor} track={track} />
+        </ThemeProvider>
+
       </div>
     );
   }

@@ -4,8 +4,9 @@ import propTypes from 'prop-types';
 import {
   CaretRightOutlined, PauseOutlined, StepForwardOutlined, StepBackwardFilled, RetweetOutlined, SwapOutlined, SoundOutlined,
 } from '@ant-design/icons';
-import song from '../../../snaps/Rozana.mp3';
-import { audio } from './Audio';
+import nextTrack from '../../../snaps/Kun Faya Kun.mp3';
+import { play, pause, changeTrack } from './Audio';
+import Button from '../Button';
 
 function AudioPlayer(props) {
   const { track } = props;
@@ -13,14 +14,15 @@ function AudioPlayer(props) {
   const [isTrackOn, setTrackOnOff] = useState(false);
 
   // const [audio] = useState(new Audio(currentTrack.src));
-  audio.src = currentTrack.src;
+  // audio.src = currentTrack.src;
   const playAudio = () => {
-    console.log('Playing');
-    audio.play();
+    play();
+    setTrackOnOff(true);
+    // audio.play();
   };
   const pauseAudio = () => {
-    console.log('Stopping');
-    audio.pause();
+    pause();
+    setTrackOnOff(false);
   };
 
   const audioControls = () => {
@@ -31,9 +33,9 @@ function AudioPlayer(props) {
     return (
       <div className="audio-home-strip-controls">
         <button type="button" className="audio-home-strip-controls-option">{prevButton}</button>
-        <button type="button" className="audio-home-strip-controls-option" onClick={() => playAudio()}>{playButton}</button>
-        <button type="button" className="audio-home-strip-controls-option" onClick={() => pauseAudio()}>{pauseButton}</button>
-        <button type="button" className="audio-home-strip-controls-option">{nextButton}</button>
+        {!isTrackOn ? <button type="button" className="audio-home-strip-controls-option" onClick={() => playAudio()}>{playButton}</button>
+          : <button type="button" className="audio-home-strip-controls-option" onClick={() => pauseAudio()}>{pauseButton}</button>}
+        <button type="button" className="audio-home-strip-controls-option" onClick={() => changeTrack(nextTrack)}>{nextButton}</button>
       </div>
     );
   };
