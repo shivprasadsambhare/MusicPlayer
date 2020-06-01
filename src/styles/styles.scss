@@ -28,14 +28,19 @@ h2 {
 }
 
 .Logo{
-  width: 20;
-  height: 20;
-  position: fixed;
-  left: 0;
-  top: 0;
+  height: 100%;
 }
 
 .savings { color: $vin-green; }
 .loss { color: $vin-red; }
 input.small { width: 46px; }
 td.fuel-savings-label { width: 175px; }
+
+
+
+.header {
+  &_search {
+    width: 30%;
+    margin: auto;
+  }
+} 

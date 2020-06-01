@@ -1,22 +1,30 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
+import styled from 'styled-components';
+import { Input } from 'antd';
 import Logo from '../../../snaps/musicLogo.jpg';
 import '../../../styles/styles.scss';
 
-const { Header } = Layout;
+const { Search } = Input;
+
+const HeaderWrapper = styled.div`
+font-size: 1em;
+width: 100%;
+height: 3.5rem;
+border-radius: 3px;
+display: flex;
+opacity: 0.3;
+
+/* Color the border and text with theme.main */
+background-color: ${props => props.theme.brandColor};
+border-bottom: 2px solid ${props => props.theme.mainBorder};
+`;
 
 function customHeader() {
   return (
-    <div>
+    <HeaderWrapper>
       <img src={Logo} alt="" className="Logo" />
-      <Header>
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-          <Menu.Item key="1">Home</Menu.Item>
-          <Menu.Item key="2">Search</Menu.Item>
-          <Menu.Item key="3">Profile</Menu.Item>
-        </Menu>
-      </Header>
-    </div>
+      <Search placeholder="input search text" onSearch={value => console.log(value)} enterButton className="header_search" />
+    </HeaderWrapper>
   );
 }
 

@@ -6,11 +6,9 @@ import {
 } from '@ant-design/icons';
 import nextTrack from '../../../snaps/Kun Faya Kun.mp3';
 import { play, pause, changeTrack } from './Audio';
-import Button from '../Button';
 
-function AudioPlayer(props) {
-  const { track } = props;
-  const [currentTrack, setCurrentTrack] = useState(track[0]);
+function AudioPlayer() {
+  const [currentTrack, setCurrentTrack] = useState();
   const [isTrackOn, setTrackOnOff] = useState(false);
 
   // const [audio] = useState(new Audio(currentTrack.src));
@@ -41,7 +39,9 @@ function AudioPlayer(props) {
   };
   const audioTrack = () => (
     <div className="audio-home-strip-track">
-      {track[0].title}
+    Title
+      {' '}
+
     </div>
   );
   const audioSettings = () => {
@@ -79,11 +79,6 @@ function AudioPlayer(props) {
     </>
   );
 }
-
-
-AudioPlayer.propTypes = {
-  track: propTypes.array,
-};
 
 
 export default AudioPlayer;
