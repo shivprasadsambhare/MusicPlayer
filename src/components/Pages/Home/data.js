@@ -248,3 +248,378 @@ export const categories = {
   previous: null,
   total: 45,
 };
+
+
+export const featuredPlaylists = {
+  message: 'Editor\'s picks',
+  playlists: {
+    href: 'https://api.spotify.com/v1/browse/featured-playlists?country=IN&locale=en_in&timestamp=2020-06-03T17%3A32%3A51&offset=0&limit=10',
+    items: [
+      {
+        collaborative: false,
+        description: 'Music from Lil Yachty, Juice WRLD and Gucci Mane.',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DX0XUsuxWHRQd',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX0XUsuxWHRQd',
+        id: '37i9dQZF1DX0XUsuxWHRQd',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f00000002defc374dbddfdde8007b07ec',
+            width: null,
+          },
+        ],
+        name: 'RapCaviar',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MTIwMjkwMCwwMDAwMDQ3NDAwMDAwMTcyN2IxNTZhNGIwMDAwMDE3Mjc3ZmRlMzNk',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX0XUsuxWHRQd/tracks',
+          total: 50,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DX0XUsuxWHRQd',
+      },
+      {
+        collaborative: false,
+        description: 'Soft pop hits for your home office.',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DX17ZtCXQuwXM',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX17ZtCXQuwXM',
+        id: '37i9dQZF1DX17ZtCXQuwXM',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f0000000202eee393cd0b5c7868452107',
+            width: null,
+          },
+        ],
+        name: 'Working From Home',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MTIwNTUyNywwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX17ZtCXQuwXM/tracks',
+          total: 80,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DX17ZtCXQuwXM',
+      },
+      {
+        collaborative: false,
+        description: 'Summer classics from yesteryear!',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DWZg863fGtALu',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DWZg863fGtALu',
+        id: '37i9dQZF1DWZg863fGtALu',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f00000002eb19e54dd1dbcbe698b49c1b',
+            width: null,
+          },
+        ],
+        name: 'Summer Throwbacks',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU4NTkzMTcwOCwwMDAwMDAyZDAwMDAwMTcxNDBlNTY4MWMwMDAwMDE2ZDAwYWQ2YmNh',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DWZg863fGtALu/tracks',
+          total: 50,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DWZg863fGtALu',
+      },
+      {
+        collaborative: false,
+        description: 'Lady Gaga is on top of the Hottest 50!',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M',
+        id: '37i9dQZF1DXcBWIGoYBM5M',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f000000022f95d8a662f518215b42528e',
+            width: null,
+          },
+        ],
+        name: 'Today\'s Top Hits',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MTE1Njg2MCwwMDAwMDNmYzAwMDAwMTcyNzg1NmU1Y2IwMDAwMDE3Mjc3MzBmYmY1',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks',
+          total: 50,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DXcBWIGoYBM5M',
+      },
+      {
+        collaborative: false,
+        description: 'Sunny chill songs and that beach vibe.',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DX3ayfz12wpQs',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX3ayfz12wpQs',
+        id: '37i9dQZF1DX3ayfz12wpQs',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f000000025d893225efd62a51d1f5af1e',
+            width: null,
+          },
+        ],
+        name: 'Sand Between My Toes',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MTIwNTUyMSwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX3ayfz12wpQs/tracks',
+          total: 50,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DX3ayfz12wpQs',
+      },
+      {
+        collaborative: false,
+        description: 'Big hits from the world of acoustics.',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DX8TvdyVZSYFY',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX8TvdyVZSYFY',
+        id: '37i9dQZF1DX8TvdyVZSYFY',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f00000002b993db2853bd63806df2464f',
+            width: null,
+          },
+        ],
+        name: 'Acoustic Throwbacks',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MTIwNTUzMCwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX8TvdyVZSYFY/tracks',
+          total: 110,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DX8TvdyVZSYFY',
+      },
+      {
+        collaborative: false,
+        description: 'Discover your favorite new chill pop songs. Cover: FLETCHER',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DX5CdVP4rz81C',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX5CdVP4rz81C',
+        id: '37i9dQZF1DX5CdVP4rz81C',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f000000025c8cc6c331f40306fc3738f7',
+            width: null,
+          },
+        ],
+        name: 'Fresh & Chill',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MDcyNDkyMCwwMDAwMDExNjAwMDAwMTcyNWU5ODAzYjcwMDAwMDE3MjNlNzYxOTZk',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX5CdVP4rz81C/tracks',
+          total: 80,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DX5CdVP4rz81C',
+      },
+      {
+        collaborative: false,
+        description: 'Throw the weights around with your favorite uptempo pop songs!',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DX5gQonLbZD9s',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX5gQonLbZD9s',
+        id: '37i9dQZF1DX5gQonLbZD9s',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f00000002b646573bb124fc0621fb3d64',
+            width: null,
+          },
+        ],
+        name: 'Pumped Pop',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MTIwNTU1OSwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX5gQonLbZD9s/tracks',
+          total: 60,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DX5gQonLbZD9s',
+      },
+      {
+        collaborative: false,
+        description: 'Boy bands, girl groups, britpop, grunge & a golden era for hip hop.',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DXbTxeAdrVG2l',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DXbTxeAdrVG2l',
+        id: '37i9dQZF1DXbTxeAdrVG2l',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f0000000207a8bb1d9066d7c819541502',
+            width: null,
+          },
+        ],
+        name: 'All Out 90s',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MTIwNTU3MSwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DXbTxeAdrVG2l/tracks',
+          total: 100,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DXbTxeAdrVG2l',
+      },
+      {
+        collaborative: false,
+        description: 'Chill techno and tech house.',
+        external_urls: {
+          spotify: 'https://open.spotify.com/playlist/37i9dQZF1DX0r3x8OtiwEM',
+        },
+        href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX0r3x8OtiwEM',
+        id: '37i9dQZF1DX0r3x8OtiwEM',
+        images: [
+          {
+            height: null,
+            url: 'https://i.scdn.co/image/ab67706f00000002895015c72e8b9e48809569e3',
+            width: null,
+          },
+        ],
+        name: 'Lowkey Tech',
+        owner: {
+          display_name: 'Spotify',
+          external_urls: {
+            spotify: 'https://open.spotify.com/user/spotify',
+          },
+          href: 'https://api.spotify.com/v1/users/spotify',
+          id: 'spotify',
+          type: 'user',
+          uri: 'spotify:user:spotify',
+        },
+        primary_color: null,
+        public: null,
+        snapshot_id: 'MTU5MTIwNTUxMiwwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl',
+        tracks: {
+          href: 'https://api.spotify.com/v1/playlists/37i9dQZF1DX0r3x8OtiwEM/tracks',
+          total: 60,
+        },
+        type: 'playlist',
+        uri: 'spotify:playlist:37i9dQZF1DX0r3x8OtiwEM',
+      },
+    ],
+    limit: 10,
+    next: 'https://api.spotify.com/v1/browse/featured-playlists?country=IN&locale=en_in&timestamp=2020-06-03T17%3A32%3A51&offset=10&limit=10',
+    offset: 0,
+    previous: null,
+    total: 12,
+  },
+};
