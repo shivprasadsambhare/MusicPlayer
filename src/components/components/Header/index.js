@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Input } from 'antd';
-import Logo from '../../../snaps/musicLogo.jpg';
+import Logo from '../../../media/images/musicLogo.jpg';
 import '../../../styles/styles.scss';
 
 const { Search } = Input;

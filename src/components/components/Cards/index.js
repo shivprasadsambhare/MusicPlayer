@@ -9,8 +9,8 @@ function card(props) {
   return (
     <Card
       hoverable
-      style={{ width: 270, padding: '10px' }}
-      cover={<img height={275} alt="example" src={cover} />}
+      style={{ width: 180, padding: '2px' }}
+      cover={<img height={170} alt="example" src={cover} />}
     >
       <Meta title={title} description="www.instagram.com" />
     </Card>

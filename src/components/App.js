@@ -11,6 +11,7 @@ import NotFoundPage from './Pages/NotFoundPage';
 import 'antd/dist/antd.css';
 import Header from './components/Header';
 import AudioPlayer from './components/AudioPlayer';
+import playlist from './Pages/playlist/index';
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -31,7 +32,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/about" component={AboutPage} />
+        <Route path="/playlist/:playlistId" component={playlist} />
         <Route component={NotFoundPage} />
       </Switch>
       <AudioPlayer />

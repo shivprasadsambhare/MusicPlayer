@@ -1,3 +1,4 @@
+import createSagaMiddleware from 'redux-saga';
 import { createStore, compose, applyMiddleware } from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
@@ -5,6 +6,9 @@ import { createBrowserHistory } from 'history';
 // 'routerMiddleware': the new way of storing route changes with redux middleware since rrV4.
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import createRootReducer from '../reducers';
+import rootSaga from '../saga';
+
+const sagaMiddleware = createSagaMiddleware();
 
 export const history = createBrowserHistory();
 const connectRouterHistory = connectRouter(history);
@@ -16,15 +20,17 @@ function configureStoreProd(initialState) {
 
     // thunk middleware can also accept an extra argument to be passed to each thunk action
     // https://github.com/reduxjs/redux-thunk#injecting-a-custom-argument
-    thunk,
+    sagaMiddleware,
     reactRouterMiddleware,
   ];
 
-  return createStore(
+  const store = createStore(
     createRootReducer(history), // root reducer with router state
     initialState,
     compose(applyMiddleware(...middlewares))
   );
+  sagaMiddleware.run(rootSaga);
+  return store;
 }
 
 function configureStoreDev(initialState) {
@@ -37,7 +43,7 @@ function configureStoreDev(initialState) {
 
     // thunk middleware can also accept an extra argument to be passed to each thunk action
     // https://github.com/reduxjs/redux-thunk#injecting-a-custom-argument
-    thunk,
+    sagaMiddleware,
     reactRouterMiddleware,
   ];
 
@@ -47,6 +53,7 @@ function configureStoreDev(initialState) {
     initialState,
     composeEnhancers(applyMiddleware(...middlewares))
   );
+  sagaMiddleware.run(rootSaga);
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

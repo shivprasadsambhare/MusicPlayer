@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import {
   CaretRightOutlined, PauseOutlined, StepForwardOutlined, StepBackwardFilled, RetweetOutlined, SwapOutlined, SoundOutlined,
 } from '@ant-design/icons';
-import nextTrack from '../../../snaps/Kun Faya Kun.mp3';
+import nextTrack from '../../../media/songs/Kun Faya Kun.mp3';
 import { play, pause, changeTrack } from './Audio';
 
 function AudioPlayer() {
@@ -39,7 +39,7 @@ function AudioPlayer() {
   };
   const audioTrack = () => (
     <div className="audio-home-strip-track">
-    Title
+      Title
       {' '}
 
     </div>
