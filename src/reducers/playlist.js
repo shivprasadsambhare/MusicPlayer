@@ -41,3 +41,18 @@ export const getAllTracks = (state = allTracksState, action) => {
       return state;
   }
 };
+
+export const getPlaylistInfo = (state = allTracksState, action) => {
+  switch (action.type) {
+    case ActionTypes.GET_PLAYLIST_INFO_SUCCESS:
+      return {
+        ...state, response: action.payload, fetched: true,
+      };
+    case ActionTypes.GET_PLAYLIST_INFO_FAILURE:
+      return {
+        ...state, response: action.payload, fetched: true,
+      };
+    default:
+      return state;
+  }
+};

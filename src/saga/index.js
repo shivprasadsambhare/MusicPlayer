@@ -26,7 +26,18 @@ function* getAllTracks(action) {
   }
 }
 
+function* getAllPlaylistInfo(action) {
+  const url = `https://api.spotify.com/v1/playlists/${action.payload.playlistId}`;
+  try {
+    const response = yield call(GET, url);
+    yield put({ type: ActionTypes.GET_PLAYLIST_INFO_SUCCESS, payload: response.data });
+  } catch (error) {
+    yield put({ type: ActionTypes.GET_PLAYLIST_INFO_FAILURE, payload: false });
+  }
+}
+
 export default function* rootSaga() {
   yield takeEvery(ActionTypes.GET_PLAYLIST_REQUEST, getPlaylist);
   yield takeLatest(ActionTypes.GET_TRACKS_REQUEST, getAllTracks);
+  yield takeLatest(ActionTypes.GET_PLAYLIST_INFO_REQUEST, getAllPlaylistInfo);
 }

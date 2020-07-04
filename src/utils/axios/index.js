@@ -3,6 +3,6 @@ import axios from 'axios';
 export const GET = url => axios.get(url, {
   headers: {
     'Content-Type': 'application/json',
-    Authorization: 'Bearer BQC8tm8mDlXVZjkP71eykn6ea6gRORWkIm5S18osD91zaMaA5BRBC7-tcYGYwtJ1XjqcvxqX4n83j1G8hGGtfJz7i5OMJBxFCOL8Qi4oBNrTQtXN_SwGKUOHWaT_4u-N4FsSsHB6qwtoHzFkCY809PAVxZb7rLxcMqM',
+    Authorization: 'Bearer BQDzx8XAy5vpHzsL0V0Kue_7SqwVGdyy4lbAvo0rohqUYKjv8-Rm-RvRYfdnSUrqt465P1NyRnY8EvDTjAqzRxfoSn3EKSbvZ703sVMnIkoshrZwfTWNOjl0J7scIZmuKYy8Mfy4rUJILxqK3mrMJUjGDApgsta4CRw',
   },
 });
