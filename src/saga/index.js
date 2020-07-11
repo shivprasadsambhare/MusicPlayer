@@ -36,8 +36,29 @@ function* getAllPlaylistInfo(action) {
   }
 }
 
+function* setPlay() {
+  yield put({ type: ActionTypes.SET_PLAY });
+}
+
+function* setPause() {
+  yield put({ type: ActionTypes.SET_PAUSE });
+}
+
+
+function* setCurrentTrack(action) {
+  yield put({ type: ActionTypes.SET_CURRENT_TRACK, payload: action.payload });
+}
+
+function* setQueue(action) {
+  yield put({ type: ActionTypes.SET_QUEUE, payload: action.payload });
+}
+
 export default function* rootSaga() {
   yield takeEvery(ActionTypes.GET_PLAYLIST_REQUEST, getPlaylist);
   yield takeLatest(ActionTypes.GET_TRACKS_REQUEST, getAllTracks);
   yield takeLatest(ActionTypes.GET_PLAYLIST_INFO_REQUEST, getAllPlaylistInfo);
+  yield takeLatest(ActionTypes.SET_PLAY_REQUEST, setPlay);
+  yield takeLatest(ActionTypes.SET_PAUSE_REQUEST, setPause);
+  yield takeLatest(ActionTypes.SET_CURRENT_TRACK_REQUEST, setCurrentTrack);
+  yield takeLatest(ActionTypes.SET_QUEUE_REQUEST, setQueue);
 }

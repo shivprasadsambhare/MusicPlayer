@@ -1,29 +1,27 @@
+/* eslint-disable react/prop-types */
 
-import React, { useState } from 'react';
-import propTypes from 'prop-types';
+import React from 'react';
+import { connect } from 'react-redux';
 import {
   CaretRightOutlined, PauseOutlined, StepForwardOutlined, StepBackwardFilled, RetweetOutlined, SwapOutlined, SoundOutlined,
 } from '@ant-design/icons';
 import nextTrack from '../../../media/songs/Kun Faya Kun.mp3';
 import { play, pause, changeTrack } from './Audio';
+import * as ActionTypes from '../../../constants/actionTypes';
 
-function AudioPlayer() {
-  const [currentTrack, setCurrentTrack] = useState();
-  const [isTrackOn, setTrackOnOff] = useState(false);
+function AudioPlayer(props) {
+  const { trackControl } = props;
 
-  // const [audio] = useState(new Audio(currentTrack.src));
-  // audio.src = currentTrack.src;
   const playAudio = () => {
     play();
-    setTrackOnOff(true);
-    // audio.play();
   };
   const pauseAudio = () => {
     pause();
-    setTrackOnOff(false);
   };
 
+
   const audioControls = () => {
+    const isTrackOn = trackControl.status === ActionTypes.PLAYING;
     const prevButton = <StepBackwardFilled style={{ color: 'white', fontSize: '30px' }} />;
     const playButton = <CaretRightOutlined style={{ color: 'white', fontSize: '30px' }} />;
     const pauseButton = <PauseOutlined style={{ color: 'white', fontSize: '30px' }} />;
@@ -39,8 +37,7 @@ function AudioPlayer() {
   };
   const audioTrack = () => (
     <div className="audio-home-strip-track">
-      Title
-      {' '}
+      {trackControl.currentTrack && trackControl.currentTrack.name}
 
     </div>
   );
@@ -75,10 +72,13 @@ function AudioPlayer() {
     <>
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
 
-      {playerStrip()}
+      {trackControl.currentTrack && playerStrip()}
     </>
   );
 }
 
+const mapStateToProps = state => ({
+  trackControl: state.trackControl,
+});
 
-export default AudioPlayer;
+export default connect(mapStateToProps, null)(AudioPlayer);

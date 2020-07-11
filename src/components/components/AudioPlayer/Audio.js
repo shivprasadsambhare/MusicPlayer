@@ -1,10 +1,21 @@
-import song from '../../../media/songs/Rozana.mp3';
+import * as ActionTypes from '../../../constants/actionTypes';
+import store from '../../../store/configureStore';
 
 export const audio = new Audio();
-audio.src = 'https://p.scdn.co/mp3-preview/df36dd78c0825531ddf6e53db2ac6064aabe51de?cid=774b29d4f13844c495f206cafdad9c86';
+
+
+export const setAudioSource = src => {
+  audio.src = src;
+};
+
+export const setCurrentTrack = track => {
+  store().dispatch({ type: ActionTypes.SET_CURRENT_TRACK_REQUEST, payload: track });
+};
+
 
 export function play() {
   audio.play();
+  store().dispatch({ type: ActionTypes.SET_PLAY_REQUEST });
 }
 
 export function changeTrack(track) {
@@ -14,4 +25,10 @@ export function changeTrack(track) {
 
 export function pause() {
   audio.pause();
+  store().dispatch({ type: ActionTypes.SET_PAUSE_REQUEST });
+}
+
+
+export function getCurrentState() {
+  console.log('daa receivedddsf', store().getState());
 }

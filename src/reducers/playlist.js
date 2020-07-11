@@ -56,3 +56,34 @@ export const getPlaylistInfo = (state = allTracksState, action) => {
       return state;
   }
 };
+
+
+const trackControlState = {
+  status: ActionTypes.PAUSED,
+  currentTrack: false,
+  queue: [],
+};
+
+
+export const trackControl = (state = trackControlState, action) => {
+  switch (action.type) {
+    case ActionTypes.SET_PLAY:
+      return {
+        ...state, status: ActionTypes.PLAYING,
+      };
+    case ActionTypes.SET_PAUSE:
+      return {
+        ...state, status: ActionTypes.PAUSED,
+      };
+      case ActionTypes.SET_CURRENT_TRACK:
+        return {
+          ...state, currentTrack: action.payload,
+        };
+      case ActionTypes.SET_QUEUE:
+          return {
+            ...state, queue: action.payload,
+      };
+    default:
+      return state;
+  }
+};

@@ -64,5 +64,31 @@ td.fuel-savings-label { width: 175px; }
     display: flex;
     padding-top: 2rem;
     align-items: center;
+    &__image {
+      img {
+        width: 15rem;
+        height: 16rem;
+      }
+      margin-right: 2rem;
+    }
+  }
+  &__tracks {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    &__item {
+      display: flex;
+      align-items: center;
+      padding: 0.3rem;
+      &:hover {
+        background-color: #70949f42;
+        cursor: pointer;
+      }
+      &__name {
+        margin-left: 4rem;
+        width: 30rem;
+        font-weight: 600;
+      }
+    }
   }
 }
